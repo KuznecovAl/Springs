@@ -11,6 +11,7 @@
       <module>t3</module>
       <module>t4</module>
       <module>t4x2xWOxml</module>
+      <module>t5</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -25,6 +26,7 @@
     <lombok.version>1.16.6</lombok.version>
     <junit.version>4.12</junit.version>
     <spring.version>5.0.4.RELEASE</spring.version>
+    <aspectj.version>1.8.4</aspectj.version>
     <!--<h2.version>1.4.196</h2.version>-->
     <!--<compiler.version>3.7.0</compiler.version>-->
     <!--<log4j.version>2.9.1</log4j.version>-->
@@ -47,6 +49,16 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
     </dependency>
   </dependencies>
 </project>

@@ -8,7 +8,7 @@
        <!--default-destroy-method="destroy">-->
 
 
-    <bean id="user" class="SpringTasks.beans.User" f init-method="init"
+    <bean id="user" class="SpringTasks.beans.User"  init-method="init"
           destroy-method="destroy" autowire="constructor">
         <property name="lastname" value="Alex"/>
         <property name="email" value="#{address.getValue()}"/>
