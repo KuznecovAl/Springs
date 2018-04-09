@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Data
 @NoArgsConstructor
@@ -17,29 +16,33 @@ import org.springframework.stereotype.Service;
 
 public class User {
 
- private static User user=new User();
+    private static User user = new User();
 
 
- private Long id;
- private String lastname;
-@Value("Kuznecov")
- private String firstname;
- private String email;
- private IAdr address;
- private Order[] orders;
+    private Long id;
+    @Value("Kuznecov")
+    private String lastname;
+    @Value("Alex")
+    private String firstname;
+    private String email;
+    private IAdr address;
+    private Order[] orders;
 
 
+    public String returnFullName(String flag) {
+        return lastname + " " + firstname;
+    }
 
- public static User getInstance(){
-   return user;
-  }
+    public static User getInstance() {
+        return user;
+    }
 
- public void init(){
-  System.out.println("init user");
- }
+    public void init() {
+        System.out.println("init user");
+    }
 
- public void destroy(){
-  System.out.println("destroy user");
- }
+    public void destroy() {
+        System.out.println("destroy user");
+    }
 
 }
